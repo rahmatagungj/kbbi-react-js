@@ -39,8 +39,8 @@ function App() {
           {show ? (
             !loading ? (
               <div>
-                <p>{results.lema}</p>
-                <p>{results.arti}</p>
+                <p>Lema : {results.lema}</p>
+                <p>Arti &nbsp;&nbsp; : {results.arti}</p>
               </div>
             ) : !failed ? (
               <p>Data tidak ada</p>
