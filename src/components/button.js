@@ -23,19 +23,25 @@ const Buttons = ({ toFind }) => {
   return (
     <Div>
       <ButtonFetch onClick={handleFetch}>CARI</ButtonFetch>
-      {show ? (
-        !loading ? (
-          <div>
-            <p>{results.lema}</p>
-            <p>{results.arti}</p>
-          </div>
-        ) : (
-          <p>LOADING ...</p>
-        )
-      ) : null}
+      <Container>
+        {show ? (
+          !loading ? (
+            <div>
+              <p>{results.lema}</p>
+              <p>{results.arti}</p>
+            </div>
+          ) : (
+            <p>LOADING ...</p>
+          )
+        ) : null}
+      </Container>
     </Div>
   );
 };
+
+const Container = styled.div`
+  background-color: red;
+`;
 
 const Div = styled.div`
   margin-top: 10px;
